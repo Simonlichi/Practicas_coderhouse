@@ -39,9 +39,10 @@ Además de servir como registro personal, el repositorio permitirá observar mi 
 
 Este repositorio se actualizará progresivamente a medida que avance en el curso.
 
-* [ ] Módulo 1
-* [ ] Módulo 2
-* [ ] Módulo 3
+* [X] Módulo 1
+* [X] Módulo 2
+* [X] Módulo 3
+* [ ] Módulo 4
 * [ ] Módulo 5
 * [ ] Módulo 6
 * [ ] Módulo 7
