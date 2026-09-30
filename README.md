@@ -23,9 +23,8 @@ El repositorio se irá organizando por módulos y unidades del curso:
 
 A lo largo del curso se trabajará con diferentes herramientas y tecnologías relacionadas con el análisis de datos, entre ellas:
 
-* SQL
-* MySQL
 * Excel
+* MySQL Workbench
 * Power BI
 * Git y GitHub
 
@@ -42,7 +41,7 @@ Este repositorio se actualizará progresivamente a medida que avance en el curso
 * [X] Módulo 1
 * [X] Módulo 2
 * [X] Módulo 3
-* [ ] Módulo 4
+* [X] Módulo 4
 * [ ] Módulo 5
 * [ ] Módulo 6
 * [ ] Módulo 7
