@@ -58,6 +58,7 @@ LEFT JOIN ventas v
 ON c.id_cliente = v.id_cliente
 WHERE v.id_cliente IS NULL;
 
+-- Se observa de que hay un cliente sin ventas asociadas
 
 -- =============================================================================
 -- PRODUCTOS SIN VENTAS
@@ -74,6 +75,7 @@ LEFT JOIN ventas v
 ON p.id_producto = v.id_producto
 WHERE v.id_producto IS NULL;
 
+-- Se observa que hay un producto sin ventas asociadas
 
 -- =============================================================================
 --  CONSOLIDADO POR CANAL
@@ -101,3 +103,6 @@ ON v.id_cliente = c.id_cliente
 WHERE c.segmento != 'Individual'
 ) AS consolidado
 GROUP BY tipo_cliente;
+
+-- Se observa que las ventas de clientes Individuales representan aproximadamente un 16%  de la 
+-- facturación total, mientras que los clientes Empresariales representan un 86%
