@@ -103,5 +103,8 @@ WHERE c.segmento != 'Individual'
 ) AS consolidado
 GROUP BY tipo_cliente;
 
--- Se observa que las ventas de clientes Individuales representan aproximadamente un 16%  de la 
--- facturación total, mientras que los clientes Empresariales representan un 86%
+-- Comparando con la suma de la tabla de ventas, se observa que la suma de los totales 
+-- por canales equivale a la suma de la tabla original, lo que significa ue UNION ALL 
+-- no duplicó ni perdió registros.
+-- Además, se observa que las ventas de clientes Individuales representan aproximadamente un  
+-- 16%  de la facturación total, mientras que los clientes Empresariales representan un 86%
