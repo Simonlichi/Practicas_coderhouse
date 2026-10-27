@@ -116,6 +116,17 @@ INSERT INTO ventas (id_venta, id_cliente, id_producto, id_ubicacion, cantidad, p
   ( 9, 4, 4, 1, 1,  120.00,  75.00, '2024-03-14'),
   (10, 5, 3, 1, 2,  450.00, 300.00, '2024-03-15');
 
+
+  -- 1. Agregar la columna 'canal' a la tabla
+ALTER TABLE ventas
+ADD COLUMN canal VARCHAR(20);
+
+-- 2. Actualizar 10 filas aleatorias con 'presencial' u 'online'
+UPDATE ventas
+SET canal = IF(RAND() < 0.5, 'Presencial', 'Online')
+ORDER BY RAND()
+LIMIT 10;
+
 -- == SECCIÓN 4: VALIDACIÓN ==
 
 SELECT * FROM categorias;
