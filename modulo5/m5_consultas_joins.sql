@@ -31,7 +31,8 @@ g.region,
 v.cantidad,
 v.precio_unitario,
 v.costo_unitario,
-v.fecha_venta
+v.fecha_venta,
+v.canal
 FROM ventas v
 JOIN clientes c
 ON v.id_cliente = c.id_cliente
@@ -77,13 +78,13 @@ WHERE v.id_producto IS NULL;
 -- Se observa que hay un producto sin ventas asociadas
 
 -- =============================================================================
---  CONSOLIDADO POR CANAL
+--  CONSOLIDADO POR TIPO DE CLIENTE
 -- =============================================================================
 
 -- El criterio escogido para separar las consultas select es la comparación de 
 -- las ventas de clientes Individuales contra las ventas de clientes Empresariales (Pymes o Corporativos)
 
-SELECT tipo_cliente, SUM(total) AS total_canal
+SELECT tipo_cliente, SUM(total) AS total_segmento
 FROM (
 SELECT 
 v.cantidad * v.precio_unitario AS total, 
@@ -103,8 +104,9 @@ WHERE c.segmento != 'Individual'
 ) AS consolidado
 GROUP BY tipo_cliente;
 
+
 -- Comparando con la suma de la tabla de ventas, se observa que la suma de los totales 
 -- por canales equivale a la suma de la tabla original, lo que significa ue UNION ALL 
 -- no duplicó ni perdió registros.
 -- Además, se observa que las ventas de clientes Individuales representan aproximadamente un  
--- 16%  de la facturación total, mientras que los clientes Empresariales representan un 86%
+-- 16%  de la facturación total, mientras que los clientes Empresariales representan un 84%
