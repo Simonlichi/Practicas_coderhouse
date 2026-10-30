@@ -43,9 +43,9 @@ Este repositorio se actualizará progresivamente a medida que avance en el curso
 * [X] Módulo 3
 * [X] Módulo 4
 * [x] Módulo 5
-* [ ] Módulo 6
-* [ ] Módulo 7
-* [ ] Módulo 8
+* [x] Módulo 6
+* [x] Módulo 7
+* [x] Módulo 8
 * [ ] Módulo 9
 * [ ] Módulo 10
 * [ ] Proyecto final
