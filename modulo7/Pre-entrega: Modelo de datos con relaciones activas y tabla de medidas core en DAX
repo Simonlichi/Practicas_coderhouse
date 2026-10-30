@@ -1,0 +1,5 @@
+## 📊 Checkpoint: Modelado de Datos y DAX en Power BI
+
+Tras la etapa de limpieza y estructuración, en este checkpoint se dota de inteligencia al proyecto mediante la construcción del modelo relacional completo. 
+Se implementó una **Tabla Calendario** para habilitar el análisis temporal y se desarrollaron **5 medidas DAX clave** que constituyen la base de cálculo para 
+todos los reportes futuros sobre datos reales.
